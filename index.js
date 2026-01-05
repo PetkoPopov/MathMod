@@ -1,4 +1,5 @@
 import { is_simple } from "./is_simple.js";
+import { gen_simple } from "./genSimple.js";
 let expInput = document.getElementById("exp");
 let numInput = document.getElementById("num");
 let modInput= document.getElementById("mod");
@@ -10,16 +11,18 @@ btn.addEventListener("click", () => {
     let numDivideMode = numInput.value % modInput.value;
     document.getElementById("result").innerText = numDivideMode;
     while(countExp*2<expInput.value){
-        alert("first loop");
+        // alert("first loop");
         numDivideMode = (numDivideMode * numDivideMode) % modInput.value;
-        countExp= countExp*2;  
+        countExp = countExp*2;  
     }
     document.getElementById("result").innerText = numDivideMode+" after first loop"+countExp;
-    // while(countExp!= expInput.value){
-    //     alert("await second loop");
-    //     numDivideMode = (numDivideMode * numInput.value) % modInput.value;
-    //     countExp++;}
-    // console.log(numDivideMode);
-
-
+    while(countExp!= expInput.value){
+        // alert("await second loop");
+        numDivideMode = (numDivideMode * numInput.value) % modInput.value;
+        countExp++;}
+    
+    document.getElementById("result").innerText = numDivideMode
+})
+modInput.addEventListener("click",()=>{
+modInput.innerHTML=gen_simple();
 })
