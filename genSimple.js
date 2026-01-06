@@ -18,7 +18,7 @@ for(let i = 1 ;i < arr.length ; i++){
 while(!is_simple(num)){
     num = num +1;
 }
-document.getElementById("result").innerText =num;
+// document.getElementById("result").innerText =num;
     return num;
 }
 export {gen_simple};

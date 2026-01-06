@@ -1,28 +1,29 @@
 import { is_simple } from "./is_simple.js";
 import { gen_simple } from "./genSimple.js";
-let expInput = document.getElementById("exp");
-let numInput = document.getElementById("num");
-let modInput= document.getElementById("mod");
+// num = Number(num);
+
 var btn = document.getElementById("btn");
 btn.addEventListener("click", () => {
-    if(!is_simple(modInput.value)){alert("mod is not simple")}
+    let expon = document.getElementById("exp").value;
+    let number = Number(document.getElementById("num").value);
+    let modInput= document.getElementById("mod");
+    let mode = modInput.textContent
+    mode= Number(mode);
+    expon = Number(expon);
+    let numDivideMode = number % mode;
+    console.log(numDivideMode);
+    if(!is_simple(mode)){alert("mod is not simple")}
 
     let countExp = 1;
-    let numDivideMode = numInput.value % modInput.value;
-    document.getElementById("result").innerText = numDivideMode;
-    while(countExp*2<expInput.value){
-        // alert("first loop");
-        numDivideMode = (numDivideMode * numDivideMode) % modInput.value;
-        countExp = countExp*2;  
-    }
-    document.getElementById("result").innerText = numDivideMode+" after first loop"+countExp;
-    while(countExp!= expInput.value){
-        // alert("await second loop");
-        numDivideMode = (numDivideMode * numInput.value) % modInput.value;
+    while(countExp == expon){
+        // alert(numDivideMode);
+        // console.log(numDivideMode)
+        numDivideMode = (numDivideMode * number) % mode;
         countExp++;}
     
     document.getElementById("result").innerText = numDivideMode
 })
-modInput.addEventListener("click",()=>{
-modInput.innerHTML=gen_simple();
+let mode = document.getElementById("mod");
+mode.addEventListener("click",()=>{
+mode.innerHTML=gen_simple();
 })
