@@ -15,14 +15,14 @@ btn.addEventListener("click", () => {
     if(!is_simple(mode)){alert("mod is not simple")}
 
     let countExp = 1;
-    while(countExp == expon){
+    while(countExp !== expon){
         // alert(numDivideMode);
         // console.log(numDivideMode)
         numDivideMode = (numDivideMode * number) % mode;
         countExp++;}
     
-    document.getElementById("result").innerText = numDivideMode
-})
+        document.getElementById("result").innerText = numDivideMode
+    })
 let mode = document.getElementById("mod");
 mode.addEventListener("click",()=>{
 mode.innerHTML=gen_simple();
