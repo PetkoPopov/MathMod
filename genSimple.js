@@ -4,7 +4,7 @@ import { is_simple } from "./is_simple.js";
  * 
  * @param {*} n size of simple number 
  */
-function gen_simple(n=5){
+function gen_simple(n){
     let arr=[];
     for(let i=0 ; i < n ; i++){
       let y = Math.random()*10; 

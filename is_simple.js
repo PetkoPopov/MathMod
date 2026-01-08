@@ -2,7 +2,7 @@ function is_simple(num){
 
     let is_sim=true
 for(let i=2;i<=Math.sqrt(num);i++){
-
+    //  if(i%2==0){continue}
         if(num%i==0){
             is_sim=false
             break
