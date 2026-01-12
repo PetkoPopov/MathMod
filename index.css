@@ -38,12 +38,15 @@ input{
  
   div {
     margin: 5px;
-  border:solid black 2px;
+    border:solid black 2px;
     width:fit-content;
     /* height: auto; */
     border-radius: 5px;
     background-color: rgb(117, 170, 216);
-    
+    padding: 10px;
+    text-align: center;
+    width:fit-content
+
  }
   #result{
     background-color: rgb(156, 84, 141);
