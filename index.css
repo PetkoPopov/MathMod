@@ -60,3 +60,11 @@ input{
     font-weight: bold;
     border-radius: 7px;
     }
+    div .name {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 15px;
+        background-color: rgb(117, 170, 216);
+        display: flex;
+        flex-flow: row wrap;
+    }
