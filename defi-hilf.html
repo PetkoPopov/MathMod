@@ -7,21 +7,37 @@
     <h1>DeFi Hilfe</h1>
     <p>Diese Seite bietet Informationen und Hilfe zu DeFi (Decentralized Finance).</p>
      <div>
-        Например Ангел изпраща две числа на Борис: като второто е голямо и просто число (модул), а първото е ключово число. След това Борис избира свое случайно число (секретно) и изчислява резултата от ключовото число, повдигнато на степен неговото случайно число, по модул на голямото просто число. Този резултат изпраща на Ангел. По същия начин Ангел изчислява своя резултат и го изпраща на Борис. Накрая и двамата изчисляват общия таен ключ, като използват получения резултат и своето случайно число.
+        Например Ангел изпраща две числа на Борис: като второто е голямо и просто число (модул), а първото е ключово число. 
      </div>
-     <div>
-        <label for="key_number">Key_number:</label>
-        <input type="number" id="key_number" value="45"/>
-        <label for="mode_number">Mode_number:</label>
-        <input type="number" id="mode_number" value="17"/></div>
-<div class="name">
-    <h2 class="name">Angel</h2>
-    <label for="angel_number">Angel_number:</label>
-    <input type="number" id="angel_number" value="23"/>
+     <div class="name">
+        <div>
 
-    <h2 class="name">Boris</h2>
-    <label for="boris_number">Boris_number:</label>
-    <input type="number" id="boris_number" value="73"/>
+            <label for="key_number">Key_number:</label>
+            <input type="number" id="key_number" value="45"/>
+        </div>
+        <div>
+
+            <label for="mode_number">Mode_number:</label>
+            <input type="number" id="mode_number" value="17"/>
+        </div>
+        <div>
+            Теси две числа са публични тоест и "злонамерен" може да има достъп до тях
+        </div>
+    </div>
+
+
+<div class="name">
+    <div>
+
+        <label for="angel_number">Ангел си намисля число което ще знае само той (секретно)тоест то няма да се изпраща до Борис</label>
+        <input type="number" id="angel_number" value="23"/>
+    </div>
+
+    <div>
+
+        <label for="boris_number">Борис си намисля число което ще знае само той (секретно)тоест то няма да се изпраща до Ангел</label>
+        <input type="number" id="boris_number" value="73"/>
+    </div>
     <button id="btn">Calc</button>
 </div>
 <div class="mod_result">
@@ -34,6 +50,13 @@
 Сега Ангел и Борис разменят своите резултати.Ако злонамерен потребител прихване тези резултати, той няма да може да изчисли общия таен ключ, тъй като не знае случайните числа на Ангел и Борис.:
 
 </div>
+<div id="explanation" class="name">
+<div>Сега Ангел взема изчисленото от Борис число и го вдига на степен своето тайно число и го интересува остатъка от делкенето на модула</div>
+<div>Сега Борис взема изчисленото от Ангел число и го вдига на степен своето тайно число и го интересува остатъка от делкенето на модула</div>
+
+</div>
+
+
 <!-- <script src="./defi.js"></script> -->
     <script src="./defi.js" type="module">
     </script>
